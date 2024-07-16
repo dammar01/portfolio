@@ -1,0 +1,22 @@
+.btn-primary {
+  padding: 0.7rem 1.7rem;
+  background: linear-gradient(60deg, $primary 0%, $tiernary_1 100%);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+}
+.btn-primary-outline {
+  padding: 0.7rem 1.7rem;
+  background: linear-gradient($bg, $bg) padding-box, linear-gradient(60deg, $primary 0%, $tiernary_1 100%) border-box;
+  border: none;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  color: #ffff;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}

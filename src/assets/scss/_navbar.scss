@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  .logo,
+  .kontak {
+    width: max-content;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .menu {
+    display: flex;
+    width: max-content;
+    list-style-type: none;
+    .nav-link {
+      padding: 0.5rem;
+      margin: 0.5rem;
+      cursor: pointer;
+      position: relative;
+      &:not(.active)::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        transform: scale(0, 1);
+        transition: transform 0.3s ease;
+        background-color: $tiernary_1;
+      }
+      &:is(.active)::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        transform: scale(1, 1);
+        transition: transform 0.3s ease;
+        background-color: $tiernary_1;
+      }
+    }
+  }
+}
+
+@media #{$sm} {
+  .navbar {
+    flex-direction: column;
+  }
+}

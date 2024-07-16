@@ -1,0 +1,45 @@
+#project {
+  display: flex;
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    @keyframes ani {
+      0%,
+      30% {
+        transform: translate3d(0, 0, 0);
+        text-shadow: 0em 0em 0 $primary;
+        color: #fff;
+      }
+      70%,
+      100% {
+        transform: translate3d(0.08em, -0.08em, 0);
+        text-shadow: -0.08em 0.08em $primary;
+        color: #fff;
+      }
+    }
+    h1 {
+      font-size: 32px;
+      width: 100%;
+      text-align: center;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      margin: 0;
+      height: max-content;
+      font-style: italic;
+      letter-spacing: 2px;
+      span {
+        position: relative;
+        display: inline-block;
+        animation: ani 1s infinite alternate cubic-bezier(0.86, 0.3, 0.07, 2);
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+            animation-delay: calc(1s * ($i / 7));
+          }
+        }
+      }
+    }
+  }
+}

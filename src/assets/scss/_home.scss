@@ -1,0 +1,158 @@
+#home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title-area,
+  .filling-area {
+    width: 47%;
+  }
+  .title-area {
+    h1 {
+      margin: 0;
+      line-height: 1.3;
+    }
+    .greet {
+      font-size: 32px;
+      font-weight: 500;
+      color: #fff;
+      opacity: 0.5;
+    }
+    .name {
+      font-size: 48px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $tiernary_1;
+    }
+    .position {
+      font-size: 32px;
+      font-weight: 500;
+      text-transform: uppercase;
+      background-color: $primary;
+      padding: 5px 10px;
+      display: inline-block;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+  }
+  .filling-area {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    .cover {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      aspect-ratio: 1/1;
+      .track {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 0;
+        left: 0;
+        justify-content: center;
+        height: max-content;
+        width: 100%;
+        background: linear-gradient(360deg, rgba(0, 0, 0, 1) 10%, rgba(68, 94, 242, 0) 100%);
+        .aksi {
+          display: flex;
+          justify-content: space-between;
+          .judul {
+            display: flex;
+            flex-direction: column;
+            h1,
+            h5 {
+              margin: 0;
+              display: inline;
+              width: max-content;
+              margin-left: 1.8rem;
+            }
+            h5 {
+              font-weight: 400;
+              color: #ffffffbd;
+              margin-bottom: 0.8rem;
+            }
+          }
+          .tombol {
+            display: flex;
+            align-items: center;
+            margin-right: 1.8rem;
+            svg {
+              cursor: pointer;
+            }
+          }
+        }
+        input[type="range"] {
+          -webkit-appearance: none;
+          appearance: none;
+          background: transparent;
+          margin-left: 1.8rem;
+          margin-right: 1.8rem;
+          margin-bottom: 1.3rem;
+          width: calc(100% - 1.8rem * 2);
+          height: 4px;
+          outline: none;
+          overflow: hidden;
+          &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: transparent;
+          }
+          &::-moz-range-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: transparent;
+          }
+          &::-ms-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+          }
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1px;
+            height: 4px;
+            background: $primary;
+            border-image-source: linear-gradient(90deg, $primary 50%, #ffffff88 0);
+            border-image-slice: 1;
+            border-image-width: 0 100vw;
+            border-image-outset: 0 calc(100vw);
+            cursor: pointer;
+          }
+          &::-moz-range-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1px;
+            height: 4px;
+            background: $primary;
+            border-image-source: linear-gradient(90deg, $primary 50%, #ababab 0);
+            border-image-slice: 1;
+            border-image-width: 0 100vw;
+            border-image-outset: 0 calc(100vw);
+            cursor: pointer;
+          }
+          &::-ms-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 0;
+            height: 0;
+            background: #ffffff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
