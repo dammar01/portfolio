@@ -2,10 +2,11 @@
   display: flex;
   .text {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
     @keyframes ani {
       0%,
       30% {
@@ -33,11 +34,91 @@
       span {
         position: relative;
         display: inline-block;
-        animation: ani 1s infinite alternate cubic-bezier(0.86, 0.3, 0.07, 2);
+        animation: ani 2s infinite alternate cubic-bezier(0.86, 0.3, 0.07, 2);
         @for $i from 1 through 7 {
           &:nth-child(#{$i}) {
-            animation-delay: calc(1s * ($i / 7));
+            animation-delay: calc(2s * ($i / 7));
           }
+        }
+      }
+    }
+    .logo {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+    }
+  }
+  .isi {
+    display: flex;
+    max-width: 60%;
+    flex-direction: column;
+    .data {
+      overflow: hidden;
+      display: flex;
+      gap: 0.5rem;
+      height: 95%;
+      .wrapper {
+        border: 1px solid $tiernary_1;
+        flex: 1 0 auto;
+        width: 10rem;
+        display: block;
+        height: 98%;
+        cursor: pointer;
+        transition-property: width, transform;
+        transition-duration: 0.3s, 1s;
+        transition-timing-function: ease;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .overlay {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: background-color 0.3s ease;
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        &:hover {
+          width: 16rem;
+          .overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+          }
+        }
+      }
+    }
+    .tombol {
+      display: flex;
+      justify-content: space-between;
+      height: 5%;
+      button {
+        width: 15%;
+        background: linear-gradient($bg, $bg) padding-box, linear-gradient(60deg, $primary 0%, $tiernary_1 100%) border-box;
+        border: none;
+        border: 2px solid transparent;
+        color: #ffff;
+        font-weight: 600;
+        position: relative;
+        cursor: pointer;
+        svg {
+          height: 100%;
+          width: auto;
+        }
+        &:nth-child(1) {
+          text-align: start;
+        }
+        &:nth-child(2) {
+          text-align: end;
         }
       }
     }
