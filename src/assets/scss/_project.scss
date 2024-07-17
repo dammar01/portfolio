@@ -50,18 +50,22 @@
       z-index: -1;
       opacity: 0.1;
       left: -2%;
-      top: 0;
+      top: -4%;
     }
   }
   .isi {
     display: flex;
     max-width: 60%;
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
     .data {
-      overflow: hidden;
+      position: relative;
       display: flex;
       gap: 0.5rem;
       height: 95%;
+      transition-property: transform;
+      transition-duration: 0.8s;
       .wrapper {
         border: 1px solid $tiernary_1;
         flex: 1 0 auto;
@@ -69,14 +73,40 @@
         display: block;
         height: 98%;
         cursor: pointer;
-        transition-property: width, transform;
-        transition-duration: 0.3s, 1s;
+        transition-property: width;
+        transition-duration: 0.3s;
         transition-timing-function: ease;
         position: relative;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+        h1 {
+          position: absolute;
+          bottom: 12.5%;
+          left: 0;
+          margin: 0;
+          width: 100%;
+          text-align: center;
+          display: inline;
+          height: max-content;
+          opacity: 0;
+          transform: translateY(15%);
+          transition-property: transform, opacity;
+          transition-duration: 0.3s, 0.2s;
+          transition-timing-function: ease;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 15%;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, $bg 100%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
         .overlay {
           content: "";
@@ -90,6 +120,11 @@
         }
         &:hover {
           width: 16rem;
+          &::after,
+          h1 {
+            opacity: 1;
+            transform: translateY(0);
+          }
           .overlay {
             content: "";
             position: absolute;
@@ -101,6 +136,16 @@
           }
         }
       }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      height: 93%;
+      width: 12.5%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 40%, $bg 100%);
+      z-index: 10;
     }
     .tombol {
       display: flex;
@@ -126,6 +171,71 @@
           text-align: end;
         }
       }
+    }
+  }
+  .view {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    button {
+      width: 5%;
+      background: linear-gradient($bg, $bg) padding-box, linear-gradient(60deg, $primary 0%, $tiernary_1 100%) border-box;
+      border: none;
+      border: 2px solid transparent;
+      color: #ffff;
+      font-weight: 600;
+      position: relative;
+      cursor: pointer;
+      svg {
+        height: 100%;
+        width: auto;
+      }
+    }
+    .wrapper {
+      width: 100%;
+      height: 70%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .detail {
+      margin-top: 2rem;
+      display: flex;
+      h1 {
+        display: inline;
+        width: 30%;
+        text-align: center;
+        margin: 0;
+        font-size: 32px;
+      }
+      p {
+        display: inline;
+        width: 50%;
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      content: "";
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
     }
   }
 }
