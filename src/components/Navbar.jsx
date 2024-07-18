@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { NavbarContext } from "./NavbarContext";
 
 const NavLink = ({ judul, id, sect, onClick }) => {
   return (
@@ -9,21 +10,16 @@ const NavLink = ({ judul, id, sect, onClick }) => {
 };
 
 const Navbar = () => {
-  const [sect, setSect] = useState("#home");
-  const navClick = (param) => {
-    if (param !== sect) {
-      setSect(param);
-    }
-  };
+  const { where, handleWhere } = useContext(NavbarContext);
   return (
     <nav className="navbar">
-      <div className="logo" onClick={() => navClick("#home")}>
+      <div className="logo" onClick={() => handleWhere("#home")}>
         Dammar's
       </div>
       <div className="menu">
-        <NavLink judul="Home" id="#home" sect={sect} onClick={navClick} />
-        <NavLink judul="About" id="#about" sect={sect} onClick={navClick} />
-        <NavLink judul="Project" id="#project" sect={sect} onClick={navClick} />
+        <NavLink judul="Home" id="#home" sect={where} onClick={handleWhere} />
+        <NavLink judul="About" id="#about" sect={where} onClick={handleWhere} />
+        <NavLink judul="Project" id="#project" sect={where} onClick={handleWhere} />
       </div>
       <div className="kontak">
         <button className="btn-primary fs-normal">Contact</button>

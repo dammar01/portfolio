@@ -1,5 +1,6 @@
-import { IconChevronsLeft, IconChevronsRight, IconMinimize } from "@tabler/icons-react";
+import { IconChevronsLeft, IconChevronsRight, IconMinimize, IconPoint, IconPointFilled, IconUnlink } from "@tabler/icons-react";
 import tes from "../assets/img/forward.jpeg";
+import tes1 from "../assets/img/image.png";
 import logo from "../assets/img/logo.png";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -79,14 +80,33 @@ const Project = () => {
               <IconMinimize />
             </button>
             <div className="wrapper">
-              <img src={tes} alt="" />
+              <div className="data-img">
+                <img src={tes1} alt="" />
+                <div className="pages">
+                  <IconPointFilled className="active" />
+                  <IconPoint />
+                  <IconPoint />
+                </div>
+              </div>
             </div>
             <div className="detail">
               <h1>{data[view].name}</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, atque. Ipsa similique reprehenderit fugiat,
-                dolores tenetur at ipsam itaque sunt fuga accusamus culpa enim quis esse alias rerum illum unde?
-              </p>
+              <div className="isi">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, atque. Ipsa similique reprehenderit fugiat,
+                  dolores tenetur at ipsam itaque sunt fuga accusamus culpa enim quis esse alias rerum illum unde?
+                  <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                    <span>To the website</span>
+                    <IconUnlink />
+                  </a>
+                </p>
+                <div className="lang">
+                  <span className="badge">Laravel</span>
+                  <span className="badge">SASS</span>
+                  <span className="badge">Bootstrap</span>
+                  <span className="badge">jQuery</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}

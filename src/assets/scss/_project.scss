@@ -116,7 +116,7 @@
           width: 100%;
           height: 100%;
           transition: background-color 0.3s ease;
-          background-color: rgba(0, 0, 0, 0.3);
+          background-color: rgba(0, 0, 0, 0.5);
         }
         &:hover {
           width: 16rem;
@@ -200,13 +200,40 @@
     }
     .wrapper {
       width: 100%;
-      height: 70%;
+      height: 65%;
       overflow: hidden;
       display: flex;
       justify-content: center;
-      img {
+      margin-top: 0.3rem;
+      gap: 1rem;
+      .data-img {
         height: 100%;
-        object-fit: contain;
+        position: relative;
+        z-index: 999;
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+        .pages {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 999;
+          svg:not(.active) {
+            opacity: 0.5;
+          }
+        }
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 10%;
+          content: "";
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, black 100%);
+          z-index: 1;
+        }
       }
     }
     .detail {
@@ -219,11 +246,46 @@
         margin: 0;
         font-size: 32px;
       }
-      p {
-        display: inline;
+      .isi {
         width: 50%;
-        margin: 0;
-        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        p {
+          display: inline;
+          margin: 0;
+          font-size: 12px;
+          a {
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
+            color: $primary;
+            align-items: center;
+            display: inline;
+            text-decoration: underline;
+            span {
+              color: $primary;
+              font-size: 14px;
+            }
+            svg {
+              height: 14px;
+              width: 14px;
+              margin-left: 0.1rem;
+              margin-bottom: -3px;
+            }
+          }
+        }
+        .lang {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 1rem;
+          gap: 0.3rem;
+          span {
+            font-size: 10px;
+          }
+        }
+
+        &::after {
+          display: none;
+        }
       }
     }
     &::before {
