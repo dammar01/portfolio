@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { NavbarContext } from "./NavbarContext";
+import { IconDeviceMobileMessage } from "@tabler/icons-react";
 
 const NavLink = ({ judul, id, sect, onClick }) => {
   return (
@@ -23,6 +24,7 @@ const Navbar = () => {
       </div>
       <div className="kontak">
         <button className="btn-primary fs-normal">Contact</button>
+        <IconDeviceMobileMessage stroke={2} />
       </div>
     </nav>
   );

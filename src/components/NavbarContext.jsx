@@ -16,7 +16,7 @@ const NavbarProvider = ({ children }) => {
 
   const { assets } = usePreloader();
   const [play, { stop, sound }] = useSound(assets.music["remember"], {
-    autoplay: true,
+    autoplay: false,
     loop: true,
     volume: 0.025,
   });
