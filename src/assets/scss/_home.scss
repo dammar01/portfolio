@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: show 0.3s;
   .title-area,
   .filling-area {
     width: 47%;
@@ -13,9 +14,9 @@
     }
     .greet {
       font-size: 32px;
-      font-weight: 500;
-      color: #fff;
-      opacity: 0.5;
+      font-weight: 600;
+      color: white;
+      opacity: 0.3;
     }
     .name {
       font-size: 48px;
@@ -67,16 +68,21 @@
             display: flex;
             flex-direction: column;
             h1,
-            h5 {
+            a {
               margin: 0;
               display: inline;
               width: max-content;
               margin-left: 1.8rem;
             }
-            h5 {
+            h1 a {
+              margin: 0;
+              font-weight: 600;
+            }
+            a {
               font-weight: 400;
               color: #ffffffbd;
               margin-bottom: 0.8rem;
+              text-decoration: none;
             }
           }
           .tombol {
@@ -102,19 +108,19 @@
           &::-webkit-slider-runnable-track {
             width: 100%;
             height: 4px;
-            cursor: pointer;
+            cursor: default !important;
             background: transparent;
           }
           &::-moz-range-track {
             width: 100%;
             height: 4px;
-            cursor: pointer;
+            cursor: default;
             background: transparent;
           }
           &::-ms-track {
             width: 100%;
             height: 4px;
-            cursor: pointer;
+            cursor: default;
             background: transparent;
             border-color: transparent;
             color: transparent;
@@ -129,7 +135,7 @@
             border-image-slice: 1;
             border-image-width: 0 100vw;
             border-image-outset: 0 calc(100vw);
-            cursor: pointer;
+            cursor: default;
           }
           &::-moz-range-thumb {
             -webkit-appearance: none;
@@ -141,7 +147,7 @@
             border-image-slice: 1;
             border-image-width: 0 100vw;
             border-image-outset: 0 calc(100vw);
-            cursor: pointer;
+            cursor: default;
           }
           &::-ms-thumb {
             -webkit-appearance: none;
@@ -149,7 +155,7 @@
             width: 0;
             height: 0;
             background: #ffffff;
-            cursor: pointer;
+            cursor: default;
           }
         }
       }

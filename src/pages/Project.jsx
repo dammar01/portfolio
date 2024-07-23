@@ -1,21 +1,20 @@
 import { IconChevronsLeft, IconChevronsRight, IconMinimize, IconPoint, IconPointFilled, IconUnlink } from "@tabler/icons-react";
-import tes from "../assets/img/forward.jpeg";
-import tes1 from "../assets/img/image.png";
-import logo from "../assets/img/logo.png";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePreloader } from "../components/Preloader";
 
 const Project = () => {
   const [ind, setInd] = useState(0);
   const [view, setView] = useState(-1);
+  const { assets } = usePreloader();
   const data = [
-    { id: 1, name: "Item 1" },
-    { id: 2, name: "Item 2" },
-    { id: 3, name: "Item 3" },
-    { id: 4, name: "Item 4" },
-    { id: 5, name: "Item 5" },
-    { id: 6, name: "Item 6" },
-    { id: 7, name: "Item 7" },
+    { id: 1, name: "Item 1", slug: "item-1" },
+    { id: 2, name: "Item 2", slug: "item-2" },
+    { id: 3, name: "Item 3", slug: "item-3" },
+    { id: 4, name: "Item 4", slug: "item-4" },
+    { id: 5, name: "Item 5", slug: "item-5" },
+    { id: 6, name: "Item 6", slug: "item-6" },
+    { id: 7, name: "Item 7", slug: "item-7" },
   ];
   const handlePrev = () => {
     const newIndex = ind === 0 ? data.length - (1 + 3) : ind - 1;
@@ -45,13 +44,13 @@ const Project = () => {
           <span>C</span>
           <span>T</span>
         </h1>
-        <img src={logo} className="logo" alt="" />
+        <img src={assets.images["logo"]} className="logo" alt="" />
       </div>
       <div className="isi">
         <div className="data" style={{ transform: getTransformValue() }}>
           {data.map((item) => (
             <div className="wrapper" key={item.id} onClick={() => overview(item.id - 1)}>
-              <img src={tes} alt="" />
+              <img src={assets.images["forward"]} alt="" />
               <h1>{item.name}</h1>
               <div className="overlay"></div>
             </div>
@@ -81,7 +80,7 @@ const Project = () => {
             </button>
             <div className="wrapper">
               <div className="data-img">
-                <img src={tes1} alt="" />
+                <img src={assets.images["image"]} alt="" />
                 <div className="pages">
                   <IconPointFilled className="active" />
                   <IconPoint />

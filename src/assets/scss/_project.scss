@@ -1,5 +1,6 @@
 #project {
   display: flex;
+  animation: show 0.3s;
   .text {
     display: flex;
     position: relative;
@@ -37,12 +38,12 @@
       span {
         position: relative;
         display: inline-block;
-        animation: ani 2s infinite alternate cubic-bezier(0.86, 0.3, 0.07, 2);
-        @for $i from 1 through 7 {
-          &:nth-child(#{$i}) {
-            animation-delay: calc(2s * ($i / 7));
-          }
-        }
+        // animation: ani 2s infinite alternate cubic-bezier(0.86, 0.3, 0.07, 2);
+        // @for $i from 1 through 7 {
+        //   &:nth-child(#{$i}) {
+        //     animation-delay: calc(2s * ($i / 7));
+        //   }
+        // }
       }
     }
     .logo {
@@ -207,10 +208,12 @@
       margin-top: 0.3rem;
       gap: 1rem;
       .data-img {
+        min-height: 100%;
         height: 100%;
         position: relative;
         z-index: 999;
         img {
+          min-height: 100%;
           height: 100%;
           object-fit: contain;
         }
@@ -222,6 +225,9 @@
           z-index: 999;
           svg:not(.active) {
             opacity: 0.5;
+          }
+          svg {
+            cursor: pointer;
           }
         }
         &::after {

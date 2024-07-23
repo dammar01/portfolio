@@ -1,10 +1,11 @@
-import saya from "../assets/img/saya.jpg";
+import { usePreloader } from "../components/Preloader";
 
 const About = () => {
+  const { assets } = usePreloader();
   return (
     <section id="about">
       <div className="foto">
-        <img src={saya} alt="" />
+        <img src={assets.images["saya"]} alt="" />
       </div>
       <div className="isi">
         <h1>About Me</h1>

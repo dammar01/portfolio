@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: show 0.3s;
   .foto {
     height: calc(75dvh - 3%);
     position: relative;
