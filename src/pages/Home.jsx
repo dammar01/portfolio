@@ -1,10 +1,10 @@
-import { IconPlayerPlayFilled } from "@tabler/icons-react";
+import { IconPlayerPlayFilled, IconPlayerStopFilled } from "@tabler/icons-react";
 import { NavbarContext } from "../components/NavbarContext";
 import { useContext } from "react";
 import { usePreloader } from "../components/Preloader";
 
 const Home = () => {
-  const { handleWhere } = useContext(NavbarContext);
+  const { handleWhere, handlePlay, isPlaying, currentTime, duration } = useContext(NavbarContext);
   const { assets } = usePreloader();
   return (
     <section id="home">
@@ -38,10 +38,14 @@ const Home = () => {
                 </a>
               </div>
               <div className="tombol">
-                <IconPlayerPlayFilled stroke={2} className="mx-2" />
+                {isPlaying ? (
+                  <IconPlayerStopFilled stroke={2} className="mx-2" onClick={handlePlay} />
+                ) : (
+                  <IconPlayerPlayFilled stroke={2} className="mx-2" onClick={handlePlay} />
+                )}
               </div>
             </div>
-            <input type="range" min={0} value={0} disabled />
+            <input type="range" min={0} value={currentTime} max={duration} disabled />
           </div>
         </div>
       </div>
