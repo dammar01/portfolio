@@ -57,6 +57,7 @@
   .isi {
     display: flex;
     max-width: 60%;
+    width: 100%;
     flex-direction: column;
     overflow: hidden;
     position: relative;
@@ -70,11 +71,12 @@
       .wrapper {
         border: 1px solid $tiernary_1;
         flex: 1 0 auto;
-        width: 10rem;
+        width: 100%;
+        max-width: 10rem;
         display: block;
         height: 98%;
         cursor: pointer;
-        transition-property: width;
+        transition-property: max-width;
         transition-duration: 0.3s;
         transition-timing-function: ease;
         position: relative;
@@ -120,7 +122,7 @@
           background-color: rgba(0, 0, 0, 0.5);
         }
         &:hover {
-          width: 16rem;
+          max-width: 16rem;
           &::after,
           h1 {
             opacity: 1;

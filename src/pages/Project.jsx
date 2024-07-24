@@ -2,32 +2,60 @@ import { IconChevronsLeft, IconChevronsRight, IconMinimize, IconPoint, IconPoint
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePreloader } from "../components/Preloader";
+import AnimatedImage from "../components/AnimatedImage";
 
 const Project = () => {
   const [ind, setInd] = useState(0);
   const [view, setView] = useState(-1);
+  const [onView, setOnView] = useState(0);
   const { assets } = usePreloader();
   const data = [
-    { id: 1, name: "Item 1", slug: "item-1" },
-    { id: 2, name: "Item 2", slug: "item-2" },
-    { id: 3, name: "Item 3", slug: "item-3" },
-    { id: 4, name: "Item 4", slug: "item-4" },
-    { id: 5, name: "Item 5", slug: "item-5" },
-    { id: 6, name: "Item 6", slug: "item-6" },
-    { id: 7, name: "Item 7", slug: "item-7" },
+    {
+      id: 1,
+      name: "MRT",
+      img: [
+        assets.images["mrt-1"],
+        assets.images["mrt-2"],
+        assets.images["mrt-3"],
+        assets.images["mrt-4"],
+        assets.images["mrt-5"],
+      ],
+      view: assets.images["mrt-view"],
+      isi: "The Integrated Material Return (IMR) Website is a platform for recording and managing data of items located in the main warehouse and other warehouses.",
+      lang: ["Laravel", "SCSS", "jQuery"],
+    },
+    {
+      id: 2,
+      name: "MRT",
+      img: [
+        assets.images["mrt-1"],
+        assets.images["mrt-2"],
+        assets.images["mrt-3"],
+        assets.images["mrt-4"],
+        assets.images["mrt-5"],
+      ],
+      view: assets.images["mrt-view"],
+    },
   ];
   const handlePrev = () => {
-    const newIndex = ind === 0 ? data.length - (1 + 3) : ind - 1;
+    const min = data.length > 3 ? 3 : 0;
+    const newIndex = ind === 0 ? data.length - (1 + min) : ind - 1;
     setInd(newIndex);
   };
 
   const handleNext = () => {
-    const newIndex = ind === data.length - (1 + 3) ? 0 : ind + 1;
+    const min = data.length > 3 ? 3 : 0;
+    const newIndex = ind === data.length - (1 + min) ? 0 : ind + 1;
     setInd(newIndex);
   };
 
   const overview = (i) => {
     setView(i);
+    if (i === -1) setOnView(0);
+  };
+
+  const onOverview = (i) => {
+    setOnView(i);
   };
   const getTransformValue = () => {
     return `translateX(-${ind * 21.8}%)`;
@@ -50,7 +78,7 @@ const Project = () => {
         <div className="data" style={{ transform: getTransformValue() }}>
           {data.map((item) => (
             <div className="wrapper" key={item.id} onClick={() => overview(item.id - 1)}>
-              <img src={assets.images["forward"]} alt="" />
+              <img src={item.view} alt="" />
               <h1>{item.name}</h1>
               <div className="overlay"></div>
             </div>
@@ -80,11 +108,11 @@ const Project = () => {
             </button>
             <div className="wrapper">
               <div className="data-img">
-                <img src={assets.images["image"]} alt="" />
+                <AnimatedImage src={data[view].img[onView]} alt="Overview" />
                 <div className="pages">
-                  <IconPointFilled className="active" />
-                  <IconPoint />
-                  <IconPoint />
+                  {data[view].img.map((val, i) => (
+                    <>{i === onView ? <IconPointFilled className="active" /> : <IconPoint onClick={() => onOverview(i)} />}</>
+                  ))}
                 </div>
               </div>
             </div>
@@ -92,18 +120,18 @@ const Project = () => {
               <h1>{data[view].name}</h1>
               <div className="isi">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, atque. Ipsa similique reprehenderit fugiat,
-                  dolores tenetur at ipsam itaque sunt fuga accusamus culpa enim quis esse alias rerum illum unde?
-                  <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                    <span>To the website</span>
-                    <IconUnlink />
-                  </a>
+                  {data[view].isi}
+                  {data[view].link ? (
+                    <a href={data[view].link} target="_blank" rel="noopener noreferrer">
+                      <span>To the website</span>
+                      <IconUnlink />
+                    </a>
+                  ) : null}
                 </p>
                 <div className="lang">
-                  <span className="badge">Laravel</span>
-                  <span className="badge">SASS</span>
-                  <span className="badge">Bootstrap</span>
-                  <span className="badge">jQuery</span>
+                  {data[view].lang.map((val) => (
+                    <span className="badge">{val}</span>
+                  ))}
                 </div>
               </div>
             </div>
