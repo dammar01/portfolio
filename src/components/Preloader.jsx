@@ -10,6 +10,7 @@ export const Preloader = ({ children }) => {
     images: {},
     music: {},
   });
+
   const particle = useMemo(() => <ParticlesBackground />, []);
 
   useEffect(() => {
@@ -50,8 +51,10 @@ export const Preloader = ({ children }) => {
     preloadAssets();
   }, []);
 
+  const preloadedAssets = useMemo(() => assets, [assets]);
+
   return (
-    <PreloaderContext.Provider value={{ isLoaded, assets }}>
+    <PreloaderContext.Provider value={{ isLoaded, assets: preloadedAssets }}>
       {particle}
       {isLoaded ? children : <div className="loader">Wait a moment...</div>}
     </PreloaderContext.Provider>

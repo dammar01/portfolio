@@ -3,49 +3,22 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePreloader } from "../components/Preloader";
 import AnimatedImage from "../components/AnimatedImage";
+import { DATA_PROJECT } from "../components/DataProject";
 
 const Project = () => {
   const [ind, setInd] = useState(0);
   const [view, setView] = useState(-1);
   const [onView, setOnView] = useState(0);
   const { assets } = usePreloader();
-  const data = [
-    {
-      id: 1,
-      name: "MRT",
-      img: [
-        assets.images["mrt-1"],
-        assets.images["mrt-2"],
-        assets.images["mrt-3"],
-        assets.images["mrt-4"],
-        assets.images["mrt-5"],
-      ],
-      view: assets.images["mrt-view"],
-      isi: "The Integrated Material Return (IMR) Website is a platform for recording and managing data of items located in the main warehouse and other warehouses.",
-      lang: ["Laravel", "SCSS", "jQuery"],
-    },
-    {
-      id: 2,
-      name: "MRT",
-      img: [
-        assets.images["mrt-1"],
-        assets.images["mrt-2"],
-        assets.images["mrt-3"],
-        assets.images["mrt-4"],
-        assets.images["mrt-5"],
-      ],
-      view: assets.images["mrt-view"],
-    },
-  ];
   const handlePrev = () => {
-    const min = data.length > 3 ? 3 : 0;
-    const newIndex = ind === 0 ? data.length - (1 + min) : ind - 1;
+    const min = DATA_PROJECT.length > 3 ? 3 : 0;
+    const newIndex = ind === 0 ? DATA_PROJECT.length - (1 + min) : ind - 1;
     setInd(newIndex);
   };
 
   const handleNext = () => {
-    const min = data.length > 3 ? 3 : 0;
-    const newIndex = ind === data.length - (1 + min) ? 0 : ind + 1;
+    const min = DATA_PROJECT.length > 3 ? 3 : 0;
+    const newIndex = ind === DATA_PROJECT.length - (1 + min) ? 0 : ind + 1;
     setInd(newIndex);
   };
 
@@ -76,7 +49,7 @@ const Project = () => {
       </div>
       <div className="isi">
         <div className="data" style={{ transform: getTransformValue() }}>
-          {data.map((item) => (
+          {DATA_PROJECT.map((item) => (
             <div className="wrapper" key={item.id} onClick={() => overview(item.id - 1)}>
               <img src={item.view} alt="" />
               <h1>{item.name}</h1>
@@ -108,28 +81,28 @@ const Project = () => {
             </button>
             <div className="wrapper">
               <div className="data-img">
-                <AnimatedImage src={data[view].img[onView]} alt="Overview" />
+                <AnimatedImage src={DATA_PROJECT[view].img[onView]} alt="Overview" />
                 <div className="pages">
-                  {data[view].img.map((val, i) => (
+                  {DATA_PROJECT[view].img.map((val, i) => (
                     <>{i === onView ? <IconPointFilled className="active" /> : <IconPoint onClick={() => onOverview(i)} />}</>
                   ))}
                 </div>
               </div>
             </div>
             <div className="detail">
-              <h1>{data[view].name}</h1>
+              <h1>{DATA_PROJECT[view].name}</h1>
               <div className="isi">
                 <p>
-                  {data[view].isi}
-                  {data[view].link ? (
-                    <a href={data[view].link} target="_blank" rel="noopener noreferrer">
+                  {DATA_PROJECT[view].isi}
+                  {DATA_PROJECT[view].link ? (
+                    <a href={DATA_PROJECT[view].link} target="_blank" rel="noopener noreferrer">
                       <span>To the website</span>
                       <IconUnlink />
                     </a>
                   ) : null}
                 </p>
                 <div className="lang">
-                  {data[view].lang.map((val) => (
+                  {DATA_PROJECT[view].lang.map((val) => (
                     <span className="badge">{val}</span>
                   ))}
                 </div>
