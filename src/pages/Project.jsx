@@ -1,23 +1,51 @@
 import { IconChevronsLeft, IconChevronsRight, IconMinimize, IconPoint, IconPointFilled, IconUnlink } from "@tabler/icons-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePreloader } from "../components/Preloader";
 import AnimatedImage from "../components/AnimatedImage";
 import { DATA_PROJECT } from "../components/DataProject";
+
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  return windowSize;
+};
+
+const clamp = (min, value, max) => {
+  return Math.min(Math.max(value, min), max);
+};
 
 const Project = () => {
   const [ind, setInd] = useState(0);
   const [view, setView] = useState(-1);
   const [onView, setOnView] = useState(0);
   const { assets } = usePreloader();
+  const { width } = useWindowSize();
+
   const handlePrev = () => {
-    const min = DATA_PROJECT.length > 3 ? 3 : 0;
+    let len = width > 991.98 ? 3 : 1;
+    const min = DATA_PROJECT.length > len ? len : 0;
     const newIndex = ind === 0 ? DATA_PROJECT.length - (1 + min) : ind - 1;
     setInd(newIndex);
   };
 
   const handleNext = () => {
-    const min = DATA_PROJECT.length > 3 ? 3 : 0;
+    let len = width > 991.98 ? 3 : 1;
+    const min = DATA_PROJECT.length > len ? len : 0;
     const newIndex = ind === DATA_PROJECT.length - (1 + min) ? 0 : ind + 1;
     setInd(newIndex);
   };
@@ -30,8 +58,12 @@ const Project = () => {
   const onOverview = (i) => {
     setOnView(i);
   };
+
   const getTransformValue = () => {
-    return `translateX(-${ind * 21.8}%)`;
+    let offset_a = 8.5 * 16;
+    let offset_b = 10 * 16;
+    let offset = clamp(offset_a, width * 0.115, offset_b);
+    return `translateX(-${ind * offset}px)`;
   };
   return (
     <section id="project">

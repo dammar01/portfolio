@@ -12,7 +12,7 @@ const About = () => {
         <p>
           Back in <span>High school</span>, I decided to try my hand at coding and quickly fell in love with the world of web
           development. Since then, I've had the opportunity to work on a variety of projects, including coding with{" "}
-          <span>Arduino</span> and developing <span>Full-stack web applications</span>.
+          <span>Arduino</span> and developing <span>Full-stack applications</span>.
         </p>
         <p>
           I thrive on learning new technologies and enjoy the challenge of bringing innovative ideas to life. I find that coding

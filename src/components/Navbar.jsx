@@ -23,10 +23,10 @@ const Navbar = () => {
           <NavLink judul="About" id="#about" sect={where} onClick={handleWhere} />
           <NavLink judul="Project" id="#project" sect={where} onClick={handleWhere} />
         </div>
-        <div className="kontak">
+        <a href="https://mailto:hello@dammar.s011@gmail.com" target="_blank" rel="noopener noreferrer" className="kontak">
           <button className="btn-primary fs-normal">Contact</button>
           <IconDeviceMobileMessage stroke={2} />
-        </div>
+        </a>
       </nav>
       <div id="social-media">
         <a href="https://github.com/dammar01" target="_blank" rel="noopener noreferrer">
