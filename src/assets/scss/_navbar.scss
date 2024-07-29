@@ -92,3 +92,31 @@
     flex-direction: column;
   }
 }
+
+#social-media {
+  position: fixed;
+  bottom: 2rem;
+  z-index: 9999;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(calc(-50% + ((1rem + 28px) * 2)));
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  a {
+    &:hover svg {
+      opacity: 1;
+    }
+    svg {
+      transition: opacity 0.3s ease;
+      padding: 0.2rem;
+      margin: 0.2rem;
+      width: 20px;
+      height: 20px;
+      opacity: 0.5;
+      color: $tiernary_1;
+      cursor: pointer;
+    }
+  }
+}

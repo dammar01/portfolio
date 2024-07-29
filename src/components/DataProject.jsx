@@ -8,18 +8,20 @@ import mrt_view from "../assets/img/project/mrt-view.jpg";
 export const DATA_PROJECT = [
   {
     id: 1,
+    tanggal: "29 January 2024",
     name: "MRT",
     img: [mrt1, mrt2, mrt3, mrt4, mrt5],
     view: mrt_view,
-    isi: "The Integrated Material Return (IMR) Website is a platform for recording and managing data of items located in the main warehouse and other warehouses.",
+    isi: "Material Return Terpadu (MRT) Website is a platform for recording and managing data of items located in the main warehouse and other warehouses.",
     lang: ["Laravel", "SCSS", "jQuery"],
   },
   {
     id: 2,
+    tanggal: "29 January 2024",
     name: "MRT",
     img: [mrt1, mrt2, mrt3, mrt4, mrt5],
     view: mrt_view,
-    isi: "The Integrated Material Return (IMR) Website is a platform for recording and managing data of items located in the main warehouse and other warehouses.",
+    isi: "Material Return Terpadu (MRT) Website is a platform for recording and managing data of items located in the main warehouse and other warehouses.",
     lang: ["Laravel", "SCSS", "jQuery"],
   },
 ];

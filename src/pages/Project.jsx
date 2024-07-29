@@ -93,7 +93,7 @@ const Project = () => {
               <h1>{DATA_PROJECT[view].name}</h1>
               <div className="isi">
                 <p>
-                  {DATA_PROJECT[view].isi}
+                  <b>{DATA_PROJECT[view].tanggal}</b> - {DATA_PROJECT[view].isi}
                   {DATA_PROJECT[view].link ? (
                     <a href={DATA_PROJECT[view].link} target="_blank" rel="noopener noreferrer">
                       <span>To the website</span>
