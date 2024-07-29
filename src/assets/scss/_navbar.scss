@@ -1,8 +1,8 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: clamp(1rem, 2dvw, 1.5rem);
+  margin-bottom: clamp(1rem, 2dvw, 1.5rem);
   .logo,
   .kontak {
     width: max-content;
@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 21px;
+    font-size: clamp(12px, 2dvw, 21px);
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
@@ -21,8 +21,9 @@
     width: max-content;
     list-style-type: none;
     .nav-link {
-      padding: 0.5rem;
-      margin: 0.5rem;
+      padding: clamp(0.2rem, 1dvw, 0.5rem);
+      margin: clamp(0.2rem, 1dvw, 0.5rem);
+      font-size: clamp(12px, 1dvw, 14px);
       cursor: pointer;
       position: relative;
       &:not(.active)::after {
@@ -84,12 +85,9 @@
       width: 20px;
       height: 20px;
     }
-  }
-}
-
-@media #{$sm} {
-  .navbar {
-    flex-direction: column;
+    @media #{$sm} {
+      display: none;
+    }
   }
 }
 
