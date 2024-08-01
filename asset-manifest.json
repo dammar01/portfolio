@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portofolio/static/css/main.b21590f6.css",
+    "main.js": "/portofolio/static/js/main.c5dca29f.js",
+    "static/js/885.0fdff066.chunk.js": "/portofolio/static/js/885.0fdff066.chunk.js",
+    "static/js/453.6a54098e.chunk.js": "/portofolio/static/js/453.6a54098e.chunk.js",
+    "static/media/PIKASONIC - Remember.mp3": "/portofolio/static/media/PIKASONIC - Remember.bf192569d0ce70475dc9.mp3",
+    "static/media/mrt-1.png": "/portofolio/static/media/mrt-1.8a876a2b55006489dbef.png",
+    "static/media/mrt-view.jpg": "/portofolio/static/media/mrt-view.dda18ffc6b5d3f0d8729.jpg",
+    "static/media/mrt-3.png": "/portofolio/static/media/mrt-3.642a03de67a53eaeddf6.png",
+    "static/media/tigeweb-1.png": "/portofolio/static/media/tigeweb-1.ae98e311725a6475e5df.png",
+    "static/media/mrt-4.png": "/portofolio/static/media/mrt-4.5e2d5643846667bed8a3.png",
+    "static/media/tigeweb-view.jpg": "/portofolio/static/media/tigeweb-view.b7bc2135c483c70a860c.jpg",
+    "static/media/mrt-2.png": "/portofolio/static/media/mrt-2.50477cda7d2016cf5a7c.png",
+    "static/media/mrt-5.png": "/portofolio/static/media/mrt-5.a7314db0eb431086aed9.png",
+    "static/media/remember.jpeg": "/portofolio/static/media/remember.5e6bf0ab075a865bbea3.jpeg",
+    "static/media/tigeweb-2.png": "/portofolio/static/media/tigeweb-2.a4e547e1097c89940dc4.png",
+    "static/media/logo.png": "/portofolio/static/media/logo.afd5598a5b2cf6a0a0b9.png",
+    "static/media/saya.jpg": "/portofolio/static/media/saya.c698cd93f3b9dc6c1eb8.jpg",
+    "index.html": "/portofolio/index.html",
+    "main.b21590f6.css.map": "/portofolio/static/css/main.b21590f6.css.map",
+    "main.c5dca29f.js.map": "/portofolio/static/js/main.c5dca29f.js.map",
+    "885.0fdff066.chunk.js.map": "/portofolio/static/js/885.0fdff066.chunk.js.map",
+    "453.6a54098e.chunk.js.map": "/portofolio/static/js/453.6a54098e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b21590f6.css",
+    "static/js/main.c5dca29f.js"
+  ]
+}
