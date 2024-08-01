@@ -2,7 +2,7 @@
   "name": "portofolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dammar01.github.io/portofolio",
+  "homepage": "https://dammar01.github.io/portfolio/",
   "dependencies": {
     "@tabler/icons": "^3.10.0",
     "@tabler/icons-preact": "^3.10.0",
