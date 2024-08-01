@@ -26,7 +26,7 @@ export const DATA_PROJECT = [
     img: [tigeweb1, tigeweb2],
     view: tigeweb_view,
     isi: "Tigeweb is a professional portfolio website showcasing the diverse projects and skills of Tigeweb. It highlights a range of web development and design work, demonstrating expertise in creating visually appealing and highly functional websites.",
-    lang: ["Express JS", "SCSS", "React JS"],
+    lang: ["Express JS", "Bootstrap", "React JS"],
     link: "https://tigeweb.com/",
   },
 ];
