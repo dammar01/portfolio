@@ -1,12 +1,13 @@
-import { useContext } from "react";
-import { NavbarContext } from "./NavbarContext";
 import { IconBrandGithub, IconBrandInstagram, IconDeviceMobileMessage } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
+import { NavbarContext } from "./NavbarContext";
+import { useContext } from "react";
 
-const NavLink = ({ judul, id, sect, onClick }) => {
+const NavLink = ({ judul, to, id, toId, onClick }) => {
   return (
-    <li className={`nav-link ${sect === id ? "active" : ""}`} onClick={() => onClick(id)}>
+    <Link to={to} className={`nav-link ${id === toId ? "active" : ""}`} onClick={onClick}>
       {judul}
-    </li>
+    </Link>
   );
 };
 
@@ -15,13 +16,13 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="logo" onClick={() => handleWhere("#home")}>
+        <Link to="/" className="logo">
           Dammar's
-        </div>
+        </Link>
         <div className="menu">
-          <NavLink judul="Home" id="#home" sect={where} onClick={handleWhere} />
-          <NavLink judul="About" id="#about" sect={where} onClick={handleWhere} />
-          <NavLink judul="Project" id="#project" sect={where} onClick={handleWhere} />
+          <NavLink judul="Home" to="/" id="#home" toId={where} onClick={() => handleWhere("#home")} />
+          <NavLink judul="About" to="/about" id="#about" toId={where} onClick={() => handleWhere("#about")} />
+          <NavLink judul="Project" to="/project" id="#project" toId={where} onClick={() => handleWhere("#project")} />
         </div>
         <a href="https://mailto:hello@dammar.s011@gmail.com" target="_blank" rel="noopener noreferrer" className="kontak">
           <button className="btn-primary fs-normal">Contact</button>

@@ -14,6 +14,8 @@
     font-size: clamp(12px, 2dvw, 21px);
     font-weight: 500;
     text-transform: uppercase;
+    color: white;
+    text-decoration: none;
     cursor: pointer;
   }
   .menu {
@@ -24,6 +26,8 @@
       padding: clamp(0.2rem, 1dvw, 0.5rem);
       margin: clamp(0.2rem, 1dvw, 0.5rem);
       font-size: clamp(12px, 1dvw, 14px);
+      color: white;
+      text-decoration: none;
       cursor: pointer;
       position: relative;
       &:not(.active)::after {

@@ -2,6 +2,7 @@ import { IconPlayerPlayFilled, IconPlayerStopFilled } from "@tabler/icons-react"
 import { NavbarContext } from "../components/NavbarContext";
 import { useContext } from "react";
 import { usePreloader } from "../components/Preloader";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { handleWhere, handlePlay, isPlaying, currentTime, duration } = useContext(NavbarContext);
@@ -18,9 +19,9 @@ const Home = () => {
           Passionate about coding to the rhythm of PIKASONIC's music, with a solid understanding of user experience principles, a
           focus on seamless functionality, and pixel-perfect precision.
         </p>
-        <button className="btn-primary px-9 py-4" onClick={() => handleWhere("#about")}>
-          Get Started
-        </button>
+        <Link to="/about" onClick={() => handleWhere("#about")}>
+          <button className="btn-primary px-9 py-4">Get Started</button>
+        </Link>
       </div>
       <div className="filling-area">
         <div className="cover">

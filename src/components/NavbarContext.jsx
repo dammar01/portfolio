@@ -5,13 +5,11 @@ import { usePreloader } from "./Preloader";
 const NavbarContext = createContext();
 
 const NavbarProvider = ({ children }) => {
-  const path = window.location.pathname;
-  // const [where, setWhere] = useState(path !== "/" ? "#" + path.slice(1) : "#home");
-  const [where, setWhere] = useState(path !== "/portfolio" ? "#" + path.slice(1) : "#home");
+  const path = window.location.pathname.split("/").pop() === "portfolio" ? "" : window.location.pathname.split("/").pop();
+  const [where, setWhere] = useState(path !== "" ? "#" + path : "#home");
   const handleWhere = (w) => {
     if (w !== where) {
       setWhere(w);
-      window.history.pushState(null, "", w.slice(1));
     }
   };
 

@@ -2,6 +2,9 @@ import { usePreloader } from "../components/Preloader";
 
 const About = () => {
   const { assets } = usePreloader();
+  const hire = () => {
+    window.open("https://mailto:hello@dammar.s011@gmail.com");
+  };
   return (
     <section id="about">
       <div className="foto">
@@ -20,7 +23,9 @@ const About = () => {
           <span>Politeknik Negeri Pontianak</span>, sharing my knowledge and passion for technology with others.
         </p>
         <div className="tombol">
-          <button className="btn-primary">Hire Me</button>
+          <button className="btn-primary" onClick={hire}>
+            Hire Me
+          </button>
           <button className="btn-primary-outline">Resume</button>
         </div>
       </div>
