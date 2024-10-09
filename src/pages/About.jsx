@@ -1,9 +1,13 @@
 import { usePreloader } from "../components/Preloader";
+import cv from "../assets/img/cv.pdf";
 
 const About = () => {
   const { assets } = usePreloader();
   const hire = () => {
     window.open("https://mailto:hello@dammar.s011@gmail.com");
+  };
+  const handleViewPdf = () => {
+    window.open(cv, "_blank");
   };
   return (
     <section id="about">
@@ -26,7 +30,9 @@ const About = () => {
           <button className="btn-primary" onClick={hire}>
             Hire Me
           </button>
-          <button className="btn-primary-outline">Resume</button>
+          <button className="btn-primary-outline" onClick={handleViewPdf}>
+            Resume
+          </button>
         </div>
       </div>
     </section>
