@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.54c4ad14.css",
-    "main.js": "/portfolio/static/js/main.92573be0.js",
+    "main.js": "/portfolio/static/js/main.44b78353.js",
     "static/js/885.0fdff066.chunk.js": "/portfolio/static/js/885.0fdff066.chunk.js",
     "static/js/453.6a54098e.chunk.js": "/portfolio/static/js/453.6a54098e.chunk.js",
     "static/media/PIKASONIC - Remember.mp3": "/portfolio/static/media/PIKASONIC - Remember.bf192569d0ce70475dc9.mp3",
@@ -12,6 +12,7 @@
     "static/media/mrt-4.png": "/portfolio/static/media/mrt-4.5e2d5643846667bed8a3.png",
     "static/media/tigeweb-view.jpg": "/portfolio/static/media/tigeweb-view.b7bc2135c483c70a860c.jpg",
     "static/media/mrt-2.png": "/portfolio/static/media/mrt-2.50477cda7d2016cf5a7c.png",
+    "static/media/cv.pdf": "/portfolio/static/media/cv.e7753bb9287f6aa9706b.pdf",
     "static/media/mrt-5.png": "/portfolio/static/media/mrt-5.a7314db0eb431086aed9.png",
     "static/media/remember.jpeg": "/portfolio/static/media/remember.5e6bf0ab075a865bbea3.jpeg",
     "static/media/tigeweb-2.png": "/portfolio/static/media/tigeweb-2.a4e547e1097c89940dc4.png",
@@ -19,12 +20,12 @@
     "static/media/saya.jpg": "/portfolio/static/media/saya.c698cd93f3b9dc6c1eb8.jpg",
     "index.html": "/portfolio/index.html",
     "main.54c4ad14.css.map": "/portfolio/static/css/main.54c4ad14.css.map",
-    "main.92573be0.js.map": "/portfolio/static/js/main.92573be0.js.map",
+    "main.44b78353.js.map": "/portfolio/static/js/main.44b78353.js.map",
     "885.0fdff066.chunk.js.map": "/portfolio/static/js/885.0fdff066.chunk.js.map",
     "453.6a54098e.chunk.js.map": "/portfolio/static/js/453.6a54098e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54c4ad14.css",
-    "static/js/main.92573be0.js"
+    "static/js/main.44b78353.js"
   ]
 }
