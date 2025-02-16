@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.54c4ad14.css",
-    "main.js": "/portfolio/static/js/main.b4caa81d.js",
+    "main.js": "/portfolio/static/js/main.bcf5d1d7.js",
     "static/js/885.0fdff066.chunk.js": "/portfolio/static/js/885.0fdff066.chunk.js",
     "static/js/453.6a54098e.chunk.js": "/portfolio/static/js/453.6a54098e.chunk.js",
     "static/media/PIKASONIC - Remember.mp3": "/portfolio/static/media/PIKASONIC - Remember.bf192569d0ce70475dc9.mp3",
@@ -31,12 +31,12 @@
     "static/media/saya.jpg": "/portfolio/static/media/saya.c698cd93f3b9dc6c1eb8.jpg",
     "index.html": "/portfolio/index.html",
     "main.54c4ad14.css.map": "/portfolio/static/css/main.54c4ad14.css.map",
-    "main.b4caa81d.js.map": "/portfolio/static/js/main.b4caa81d.js.map",
+    "main.bcf5d1d7.js.map": "/portfolio/static/js/main.bcf5d1d7.js.map",
     "885.0fdff066.chunk.js.map": "/portfolio/static/js/885.0fdff066.chunk.js.map",
     "453.6a54098e.chunk.js.map": "/portfolio/static/js/453.6a54098e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54c4ad14.css",
-    "static/js/main.b4caa81d.js"
+    "static/js/main.bcf5d1d7.js"
   ]
 }
