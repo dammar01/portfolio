@@ -1,11 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.54c4ad14.css",
-    "main.js": "/portfolio/static/js/main.bcf5d1d7.js",
+    "main.js": "/portfolio/static/js/main.f6de5074.js",
     "static/js/885.0fdff066.chunk.js": "/portfolio/static/js/885.0fdff066.chunk.js",
     "static/js/453.6a54098e.chunk.js": "/portfolio/static/js/453.6a54098e.chunk.js",
     "static/media/PIKASONIC - Remember.mp3": "/portfolio/static/media/PIKASONIC - Remember.bf192569d0ce70475dc9.mp3",
+    "static/media/aw-1.png": "/portfolio/static/media/aw-1.24e2e29fa688080b9495.png",
+    "static/media/cv.pdf": "/portfolio/static/media/cv.e727efbbef83493aaf83.pdf",
     "static/media/tekken_tactics-2.png": "/portfolio/static/media/tekken_tactics-2.986a313b2daa57af6832.png",
+    "static/media/hnlp-1.png": "/portfolio/static/media/hnlp-1.244fb15721a8ac757473.png",
     "static/media/tekken_tactics-4.png": "/portfolio/static/media/tekken_tactics-4.8b986a766a669a3ce173.png",
     "static/media/tekken_tactics-1.png": "/portfolio/static/media/tekken_tactics-1.520d63322cb5d0a2df06.png",
     "static/media/tekken_tactics-view.png": "/portfolio/static/media/tekken_tactics-view.59d648d38433137e9be3.png",
@@ -23,20 +26,26 @@
     "static/media/mrt-2.png": "/portfolio/static/media/mrt-2.50477cda7d2016cf5a7c.png",
     "static/media/tekken8_api-3.png": "/portfolio/static/media/tekken8_api-3.134f4b7ee765736d489c.png",
     "static/media/tekken8_api-2.png": "/portfolio/static/media/tekken8_api-2.4277fab64514ba396083.png",
-    "static/media/cv.pdf": "/portfolio/static/media/cv.e7753bb9287f6aa9706b.pdf",
+    "static/media/hnlp-2.png": "/portfolio/static/media/hnlp-2.6ede93fa681cfa4f37ee.png",
     "static/media/mrt-5.png": "/portfolio/static/media/mrt-5.a7314db0eb431086aed9.png",
+    "static/media/hnlp-3.png": "/portfolio/static/media/hnlp-3.8295fbd91ef3508e709a.png",
+    "static/media/aw-3.png": "/portfolio/static/media/aw-3.1423a9caa4033a481da3.png",
+    "static/media/hnlp-4.png": "/portfolio/static/media/hnlp-4.898565c45d31e9b4984c.png",
     "static/media/remember.jpeg": "/portfolio/static/media/remember.5e6bf0ab075a865bbea3.jpeg",
+    "static/media/aw-2.png": "/portfolio/static/media/aw-2.5049a5a81e306173631d.png",
     "static/media/tigeweb-2.png": "/portfolio/static/media/tigeweb-2.a4e547e1097c89940dc4.png",
+    "static/media/aw-4.png": "/portfolio/static/media/aw-4.d4164dd7bb91d7fa3a6b.png",
     "static/media/logo.png": "/portfolio/static/media/logo.afd5598a5b2cf6a0a0b9.png",
+    "static/media/scp-1.png": "/portfolio/static/media/scp-1.7ea635739f3b3c615064.png",
     "static/media/saya.jpg": "/portfolio/static/media/saya.c698cd93f3b9dc6c1eb8.jpg",
     "index.html": "/portfolio/index.html",
     "main.54c4ad14.css.map": "/portfolio/static/css/main.54c4ad14.css.map",
-    "main.bcf5d1d7.js.map": "/portfolio/static/js/main.bcf5d1d7.js.map",
+    "main.f6de5074.js.map": "/portfolio/static/js/main.f6de5074.js.map",
     "885.0fdff066.chunk.js.map": "/portfolio/static/js/885.0fdff066.chunk.js.map",
     "453.6a54098e.chunk.js.map": "/portfolio/static/js/453.6a54098e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54c4ad14.css",
-    "static/js/main.bcf5d1d7.js"
+    "static/js/main.f6de5074.js"
   ]
 }
