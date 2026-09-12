@@ -22,6 +22,18 @@ import tekken_tactics5 from "../assets/img/project/tekken_tactics-5.png";
 import tekken_tactics6 from "../assets/img/project/tekken_tactics-6.png";
 import tekken_tactics_view from "../assets/img/project/tekken_tactics-view.png";
 
+import scp1 from "../assets/img/project/scp-1.png";
+
+import aw1 from "../assets/img/project/aw-1.png";
+import aw2 from "../assets/img/project/aw-2.png";
+import aw3 from "../assets/img/project/aw-3.png";
+import aw4 from "../assets/img/project/aw-4.png";
+
+import hnlp1 from "../assets/img/project/hnlp-1.png";
+import hnlp2 from "../assets/img/project/hnlp-2.png";
+import hnlp3 from "../assets/img/project/hnlp-3.png";
+import hnlp4 from "../assets/img/project/hnlp-4.png";
+
 export const DATA_PROJECT = [
   {
     id: 1,
@@ -59,5 +71,35 @@ export const DATA_PROJECT = [
     view: tekken8_api_view,
     isi: "This API provides Tekken 8 move data and notation generation tools, sourced from WavuWiki. It includes features to retrieve and search movesets, and a notation maker that detects starter frames and generates button notation images.",
     lang: ["Python", "FastAPI", "Docker"],
+  },
+  {
+    id: 5,
+    tanggal: "29 June 2026",
+    name: "URL Discovery",
+    img: [scp1],
+    view: scp1,
+    isi: "URL Discovery is a Python pipeline that generates targeted Google dork queries, filters and deduplicates results, stores them as JSON, and extracts relevant page content with Playwright and guarded HTTP workers for SHS/PLTS research in West Kalimantan.",
+    lang: ["Python", "Playwright", "HTTPX"],
+    link: "https://github.com/dammar01/url-discovery",
+  },
+  {
+    id: 6,
+    tanggal: "9 September 2026",
+    name: "Agent Workflow",
+    img: [aw1, aw2, aw3, aw4],
+    view: aw1,
+    isi: "Agent Workflow is a two-agent orchestration runtime that delegates codebase reading and search to a lower-cost read-only agent while keeping reasoning and file writes with the main agent. It validates, redacts, and persists evidence before returning concise digests with file-and-line anchors.",
+    lang: ["Python", "PowerShell", "Shell"],
+    link: "https://github.com/dammar01/agent-workflow",
+  },
+  {
+    id: 7,
+    tanggal: "16 August 2026",
+    name: "Calibrated Hybrid NLP",
+    img: [hnlp1, hnlp2, hnlp3, hnlp4],
+    view: hnlp1,
+    isi: "Calibrated Hybrid NLP is a research pipeline for classifying Indonesian digital discourse about Solar Home Systems in West Kalimantan as negative, neutral, or positive. It combines calibrated IndoBERT probabilities with locally adapted SO-CAL-inspired rules and conditional decision-level fusion.",
+    lang: ["Python", "IndoBERT", "Polars"],
+    link: "https://github.com/dammar01/hybrid-nlp-sentiment-classification",
   },
 ];
